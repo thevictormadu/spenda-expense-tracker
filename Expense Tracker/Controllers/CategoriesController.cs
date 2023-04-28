@@ -44,13 +44,16 @@ namespace Expense_Tracker.Controllers
             return View(category);
         }
 
-        // GET: Categories/Create
-        public IActionResult AddOrEdit()
+        // GET: Categories/AddOrEdit
+        public IActionResult AddOrEdit(int id = 0)
         {
-            return View(new Category());
+            if (id == 0)
+                return View(new Category());
+            else
+                return View(_context.Categories.Find(id));
         }
 
-        // POST: Categories/Create
+        // POST: Categories/AddOrEdit
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
