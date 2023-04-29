@@ -9,15 +9,45 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+*:not(.fa-solid):not(.fa):not(.e-icons) {
+    font-family: 'Inter', sans-serif;
 }
 
 body {
   margin-bottom: 60px;
   background-color: #12161d;
   color: white;
-  font-size: x-large;
+  
+}
+
+.e-bigger {
+    font-size: x-large;
+}
+
+.e-grid{
+    border: 0;
+    border-radius: 5px;
+}
+
+.e-grid .e-gridcontent, .e-grid .e-table{
+    background-color: #1a222b;
+}
+
+.e-grid .e-gridheader{
+    border: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+    background-color: #222b33;
+}
+
+.e-grid .e-gridheader .e-headercell{
+    background: none;
 }
 
 .e-btn-group.custom-rbt-group{

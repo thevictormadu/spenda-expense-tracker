@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Expense_Tracker.Models
 {
@@ -9,5 +10,12 @@ namespace Expense_Tracker.Models
         public string Title { get; set; }
         public string Icon { get; set; } = "";
         public string Type { get; set; } = "Expense";
+
+
+        [NotMapped]
+        public string? IconTitle
+        {
+            get { return Icon + " " + Title; }
+        }
     }
 }
