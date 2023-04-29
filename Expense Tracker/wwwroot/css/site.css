@@ -21,7 +21,7 @@ html {
 /*Button*/
 .btn:focus, .btn:active{
     outline: none !important;
-    border: none;
+    box-shadow: none;
 }
 
 /*Hyperlinks*/
