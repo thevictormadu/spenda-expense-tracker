@@ -11,7 +11,7 @@
             <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
             <e-grid-columns>
                 <e-grid-column field="IconTitle" headerText="Category"></e-grid-column>
-                <e-grid-column field="Type" template="#typeColumnTemplate" width="150px" align="left"></e-grid-column>
+                <e-grid-column field="Type" template="#typeColumnTemplate" width="150px"></e-grid-column>
                 <e-grid-column field="" headerText="Actions" template="#actionColumnTemplate" width="100px"></e-grid-column>
             </e-grid-columns>
         </ejs-grid>
@@ -33,7 +33,7 @@
 
 <script id="actionColumnTemplate" type="text/x-template">
     <div class="d-flex flex-row justify-content-start">
-        <a class="btn btn-sm" href="Categories/AddOrEdit/${CategoryId}"><i class="fa-solid fa-pen text-light"></i></a>
-        <a class="btn btn-sm" href="Categories/Delete/${CategoryId}"><i class="fa-solid fa-trash text-light"></i></a>
+        <a class="btn btn-sm no-a-decoration" href="Categories/AddOrEdit/${CategoryId}"><i class="fa-solid fa-pen text-light"></i></a>
+        <a class="btn btn-sm no-a-decoration" href="Categories/Delete/${CategoryId}"><i class="fa-solid fa-trash text-light"></i></a>
     <div>
 </script>

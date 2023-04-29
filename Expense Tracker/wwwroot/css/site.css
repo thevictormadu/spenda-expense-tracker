@@ -18,6 +18,18 @@ html {
     font-family: 'Inter', sans-serif;
 }
 
+/*Button*/
+.btn:focus, .btn:active{
+    outline: none !important;
+    border: none;
+}
+
+/*Hyperlinks*/
+.no-a-decoration, .no-a-decoration:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
   margin-bottom: 60px;
   background-color: #12161d;
