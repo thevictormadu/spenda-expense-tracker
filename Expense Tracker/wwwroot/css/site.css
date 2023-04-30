@@ -43,28 +43,63 @@ body {
 
 .e-grid{
     border: 0;
-    border-radius: 5px;
+    
 }
 
 .e-grid .e-gridcontent, .e-grid .e-table{
     background-color: #1a222b;
+    padding: 0 .5rem;
 }
 
-.e-grid .e-gridheader{
+.e-grid .e-table .e-row .e-rowcell{
+    border-color: #222b33;
+}
+
+
+.e-bigger .e-pager div.e-parentmsgbar, .e-pager.e-bigger div.e-parentmsgbar{
+    font-size: .8rem;
+}
+
+
+.e-grid .e-gridheader {
     border: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 10px;
     background-color: #222b33;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 0.5rem;
 }
 
 .e-grid .e-gridheader .e-headercell{
     background: none;
 }
 
-.e-btn-group.custom-rbt-group{
-    width: 100%;
+    .e-grid .e-pager {
+        background-color: #222b33;
+        border: none;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+.e-grid .e-pagercontainer {
+    border: none;
 }
+
+.e-grid .e-gridpager .e-prevpagedisabled,
+.e-grid .e-gridpager .e-prevpage,
+.e-grid .e-gridpager .e-nextpage,
+.e-grid .e-gridpager .e-nextpagedisabled,
+.e-grid .e-gridpager .e-lastpagedisabled,
+.e-grid .e-gridpager .e-lastpage,
+.e-grid .e-gridpager .e-firstpage,
+.e-grid .e-gridpager .e-firstpagedisabled {
+    background: #222b33;
+    border: none;
+}
+
+    .e-btn-group.custom-rbt-group {
+        width: 100%;
+    }
 
 .e-btn-group.custom-rbt-group .e-btn {
     width: 50%;
