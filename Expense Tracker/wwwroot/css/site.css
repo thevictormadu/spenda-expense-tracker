@@ -48,7 +48,7 @@ body {
 
 .e-grid .e-gridcontent, .e-grid .e-table{
     background-color: #1a222b;
-    padding: 0 .5rem;
+    
 }
 
 .e-grid .e-table .e-row .e-rowcell{
@@ -56,9 +56,7 @@ body {
 }
 
 
-.e-bigger .e-pager div.e-parentmsgbar, .e-pager.e-bigger div.e-parentmsgbar{
-    font-size: .8rem;
-}
+
 
 
 .e-grid .e-gridheader {
@@ -71,9 +69,13 @@ body {
     font-size: 0.5rem;
 }
 
-.e-grid .e-gridheader .e-headercell{
-    background: none;
+.e-grid .e-gridheader .e-headercontent{
+    
 }
+
+    .e-grid .e-gridheader .e-headercell {
+        background: #222b33;
+    }
 
     .e-grid .e-pager {
         background-color: #222b33;
@@ -83,6 +85,7 @@ body {
 
 .e-grid .e-pagercontainer {
     border: none;
+    background: none;
 }
 
 .e-grid .e-gridpager .e-prevpagedisabled,
@@ -96,6 +99,13 @@ body {
     background: #222b33;
     border: none;
 }
+
+    .e-grid .e-gridpager .e-numericitem, .e-grid .e-gridpager .e-numericitem:hover {
+        border-radius: .4rem;
+        outline: none;
+        border: none;
+        color: gray;
+    }
 
     .e-btn-group.custom-rbt-group {
         width: 100%;
