@@ -111,6 +111,23 @@ body {
         width: 100%;
     }
 
+/*.e-btn.e-success, .e-css.e-btn.e-success {
+    background-color: #695088;
+    border-color: #695088;
+    transition-duration: .5s;
+    transition-property: all;
+    
+}
+
+    .e-btn.e-success:hover {
+        background-color: #503A6C;
+        border-color: #503A6C;
+    }*/
+
+.categories-image{
+    width: 200px;
+}
+
 .e-btn-group.custom-rbt-group .e-btn {
     width: 50%;
 }
