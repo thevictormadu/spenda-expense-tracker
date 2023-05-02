@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Expense_Tracker.Models;
+using Syncfusion.EJ2.Charts;
 
 namespace Expense_Tracker.Controllers
 {
@@ -72,6 +73,19 @@ namespace Expense_Tracker.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [NonAction]
+        public void PopulateCategories()
+        {
+            var categoriesCollection = _context.Categories.ToList();
+
+            var defaultCategory = new Category()
+            {
+                CategoryId = 0,
+                Title = "Choose a category"
+            };
+
+            categoriesCollection.Insert(0, defaultCategory);
+        }
        
     }
 }
