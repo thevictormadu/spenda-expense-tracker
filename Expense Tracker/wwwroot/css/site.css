@@ -152,6 +152,12 @@ body {
 
 .categories-image{
     height: 200px;
+    transition-property: all;
+    transition-duration: .7s;
+}
+
+.categories-image:hover {
+    height: 220px;
 }
 
 .e-btn-group.custom-rbt-group .e-btn {
