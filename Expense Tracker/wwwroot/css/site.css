@@ -95,22 +95,41 @@ body {
     background: none;
 }
 
-.e-grid .e-gridpager .e-prevpagedisabled,
-.e-grid .e-gridpager .e-prevpage,
-.e-grid .e-gridpager .e-nextpage,
-.e-grid .e-gridpager .e-nextpagedisabled,
-.e-grid .e-gridpager .e-lastpagedisabled,
-.e-grid .e-gridpager .e-lastpage,
-.e-grid .e-gridpager .e-firstpage,
-.e-grid .e-gridpager .e-firstpagedisabled {
-    background: #222b33;
-    border: none;
+    .e-grid .e-gridpager .e-prevpagedisabled,
+    .e-grid .e-gridpager .e-prevpage,
+    .e-grid .e-gridpager .e-nextpage,
+    .e-grid .e-gridpager .e-nextpagedisabled,
+    .e-grid .e-gridpager .e-lastpagedisabled,
+    .e-grid .e-gridpager .e-lastpage,
+    .e-grid .e-gridpager .e-firstpage,
+    .e-grid .e-gridpager .e-firstpagedisabled,
+    .e-grid .e-gridpager .e-numericitem {
+        background: #222b33;
+        border: none;
+        
+        
+    }
+
+.e-pager div.e-icons.e-pager-default, .e-pager div.e-icons.e-disable, .e-pager .e-numericitem {
+    color: gray;
+    outline: none !important;
+    border: none !important;
 }
 
-    .e-grid .e-gridpager .e-numericitem, .e-grid .e-gridpager .e-numericitem:hover {
-        border-radius: .4rem;
+    .e-pager .e-numericitem:hover, .e-grid .e-gridpager .e-numericitem:hover {
+        background: #222b33 !important;
+        color: gray;
+        outline: none !important;
+        border: none !important;
+    }
+
+
+
+    .e-grid .e-gridpager .e-currentitem {
+        
         outline: none;
         border: none;
+        border-radius: .4rem;
         color: gray;
     }
 

@@ -12,7 +12,27 @@ namespace Expense_Tracker.Models
         public DateTime Date { get; set; } = DateTime.Now;
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
+
+        [NotMapped]
+        public string CategoryTitleWithIcon
+        {
+            get
+            {
+                return Category==null? "" : Category.Icon + " " + Category.Title;
+
+            }
+        }
+
+        [NotMapped]
+        public string AmountWithPrefix
+        {
+            get
+            {
+                return ((Category == null || Category.Type == "Expense") ? "- " : "+ ") + Amount.ToString("C0");
+
+            }
+        }
 
     }
 }
