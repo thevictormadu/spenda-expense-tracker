@@ -31,7 +31,7 @@ namespace Expense_Tracker.Controllers
         // GET: Transactions/Create
         public IActionResult AddOrEdit()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId");
+            PopulateCategories();
             return View(new Transaction());
         }
 
@@ -85,6 +85,8 @@ namespace Expense_Tracker.Controllers
             };
 
             categoriesCollection.Insert(0, defaultCategory);
+
+            ViewBag.Categories = categoriesCollection;
         }
        
     }

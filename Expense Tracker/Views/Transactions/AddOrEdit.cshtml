@@ -1,4 +1,5 @@
-﻿@model Expense_Tracker.Models.Transaction
+﻿@using System.Globalization;
+@model Expense_Tracker.Models.Transaction
 
 @{
     ViewData["PageTitle"] = Model.TransactionId == 0 ? "Create Transaction" : "Edit Transaction";
@@ -15,22 +16,25 @@
                     <span asp-validation-for="Date" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
-                    <ejs-dropdownlist id="games" dataSource="data"> </ejs-dropdownlist>
-                    <label asp-for="CategoryId" class="control-label"></label>
-                    <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                    <ejs-dropdownlist id="ddlCategory" dataSource="@ViewBag.Categories" ejs-for="CategoryId" 
+                    placeholder="Category" floatLabelType="Always" allowFiltering="true" ignoreAccent="true"
+                    filterType="Contains" popupHeight="220px">
+                        <e-dropdownlist-fields value="CategoryId" text="IconTitle">
+
+                        </e-dropdownlist-fields>
+                    </ejs-dropdownlist>
+                    
                 </div>
                 <div class="mb-3">
-                    <label asp-for="Amount" class="control-label"></label>
-                    <input asp-for="Amount" class="form-control" />
+                    <ejs-numerictextbox id="amount" Type="text" ejs-for="Amount" placeholder="Amount" floatLabelType="Always" min="0" format="C0"></ejs-numerictextbox>
                     <span asp-validation-for="Amount" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
-                    <label asp-for="Note" class="control-label"></label>
-                    <input asp-for="Note" class="form-control" />
+                    <ejs-textbox multiline="true" placeholder="Note"  id="note" ejs-for="Note" floatLabelType="Always"></ejs-textbox>
                     <span asp-validation-for="Note" class="text-danger"></span>
                 </div>
-                <div class="mb-3">
-                    <input type="submit" value="Create" class="btn btn-primary" />
+                <div>
+                    <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
                 </div>
             </form>
             </div>
@@ -45,4 +49,10 @@
 </div>
 
 </div>
+
+@{
+    NumberFormatInfo LocalFormat = (NumberFormatInfo)NumberFormatInfo.CurrentInfo.Clone();
+    // Replace the default currency symbol with the local currency symbol.
+    LocalFormat.CurrencySymbol = "F";
+}
 
