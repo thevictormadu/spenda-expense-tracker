@@ -2,11 +2,13 @@
 
 @{
     ViewData["PageTitle"] = "Categories";
+    ViewData["PageActionText"] = "+ New Category";
+    ViewData["PageActionUrl"] = "Categories/AddOrEdit";
 }
 
 
 <div class="row" >
-    <div class="col-md-7">
+    <div class="col-lg-7">
         <ejs-grid id="Grid" dataSource="@Model" allowPaging="true" allowSorting="true">
             <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
             <e-grid-columns>
@@ -16,8 +18,8 @@
             </e-grid-columns>
         </ejs-grid>
     </div>
-    <div class="col-md-5">
-        <div class="widget d-flex h-100 justify-content-center align-items-center" style="background-color:#212b36">
+    <div class="col-lg-5">
+        <div class="widget d-flex h-100 justify-content-center align-items-center p-5" style="background-color:#212b36">
             @*<i class="fa-solid fa-shapes fa-2xl"></i>*@
             <img src="./images/tag.png"  class="categories-image"/>
         </div>
