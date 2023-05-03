@@ -1,10 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
 
 namespace Expense_Tracker.Models
 {
     public class Transaction
     {
+        CultureInfo ngCulture = CultureInfo.CreateSpecificCulture("en-NG");
+
         [Key]
         public int TransactionId { get; set; }
         
@@ -36,7 +39,7 @@ namespace Expense_Tracker.Models
         {
             get
             {
-                return ((Category == null || Category.Type == "Expense") ? "- " : "+ ") + Amount.ToString("C0");
+                return ((Category == null || Category.Type == "Expense") ? "- " : "+ ") + string.Format(ngCulture, "{0:C0}", Amount);
 
             }
         }

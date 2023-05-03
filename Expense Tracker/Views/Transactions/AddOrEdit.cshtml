@@ -3,7 +3,9 @@
 
 @{
     ViewData["PageTitle"] = Model.TransactionId == 0 ? "Create Transaction" : "Edit Transaction";
+    CultureInfo ngCulture = CultureInfo.CreateSpecificCulture("en-NG");
 }
+
 
 
 <div class="row">
@@ -50,7 +52,7 @@
     </div>
 </div>
 
-</div>
+
 
 @{
     NumberFormatInfo LocalFormat = (NumberFormatInfo)NumberFormatInfo.CurrentInfo.Clone();
