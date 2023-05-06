@@ -34,6 +34,7 @@ body {
     margin-bottom: 60px;
     background-color: #12161d;
     color: white;
+    overflow: hidden;
 }
 
 .e-bigger {
@@ -41,7 +42,9 @@ body {
 }
 
 .main-content {
-    margin-left: 290px
+    margin-left: 290px;
+    overflow-y: auto;
+    height: 90vh;
 }
 
 /*Breadcrumb*/
