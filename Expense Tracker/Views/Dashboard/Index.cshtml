@@ -52,8 +52,16 @@
                 <div class="p-4">
                     <h5 class="fw-bold">Expense By Category</h5>
                 </div>
-                <ejs-accumulationchart id="dougnutchart" background="#1a222b">
-
+                <ejs-accumulationchart id="dougnutchart" background="#1a222b" enableSmartLabels>
+                    <e-accumulation-series-collection>
+                        <e-accumulation-series dataSource="@ViewBag.DoughnutChartData" xName="CategoryTitleWithIcon" yName="Amount" innerRadius="60%" legendShape="Circle">
+                            <e-accumulationseries-datalabel name="FormattedAmount" visible></e-accumulationseries-datalabel>
+                        </e-accumulation-series>
+                    </e-accumulation-series-collection>
+                    <e-accumulationchart-legendsettings position="Top" toggleVisibility="false">
+                        <e-legendsettings-textstyle color="white" size="1rem" />
+                    </e-accumulationchart-legendsettings>
+                    <e-accumulationchart-tooltipsettings enable></e-accumulationchart-tooltipsettings>
                 </ejs-accumulationchart>
             </div>
         </div

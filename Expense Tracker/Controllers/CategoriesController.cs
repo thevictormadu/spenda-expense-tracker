@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Expense_Tracker.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Expense_Tracker.Models;
 
 namespace Expense_Tracker.Controllers
 {
@@ -21,12 +16,10 @@ namespace Expense_Tracker.Controllers
         // GET: Categories
         public async Task<IActionResult> Index()
         {
-              return _context.Categories != null ? 
-                          View(await _context.Categories.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
+            return _context.Categories != null ?
+                        View(await _context.Categories.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
         }
-
-        
 
         // GET: Categories/AddOrEdit
         public IActionResult AddOrEdit(int id = 0)
@@ -57,7 +50,6 @@ namespace Expense_Tracker.Controllers
             return View(category);
         }
 
-
         // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -72,10 +64,9 @@ namespace Expense_Tracker.Controllers
             {
                 _context.Categories.Remove(category);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
     }
 }

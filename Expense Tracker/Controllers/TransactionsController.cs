@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Expense_Tracker.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Expense_Tracker.Models;
-using Syncfusion.EJ2.Charts;
 
 namespace Expense_Tracker.Controllers
 {
@@ -26,7 +20,7 @@ namespace Expense_Tracker.Controllers
             return View(await applicationDbContext.ToListAsync());
         }
 
-        
+
 
         // GET: Transactions/Create
         public IActionResult AddOrEdit(int id = 0)
@@ -41,7 +35,7 @@ namespace Expense_Tracker.Controllers
             {
                 return View(_context.Transactions.Find(id));
             }
-            
+
         }
 
         // POST: Transactions/Create
@@ -65,7 +59,7 @@ namespace Expense_Tracker.Controllers
             return View(transaction);
         }
 
-      
+
 
         // POST: Transactions/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -81,7 +75,7 @@ namespace Expense_Tracker.Controllers
             {
                 _context.Transactions.Remove(transaction);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -101,6 +95,6 @@ namespace Expense_Tracker.Controllers
 
             ViewBag.Categories = categoriesCollection;
         }
-       
+
     }
 }
