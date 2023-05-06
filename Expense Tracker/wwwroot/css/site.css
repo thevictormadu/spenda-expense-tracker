@@ -180,15 +180,25 @@ body {
     background-color: #1a222b;
 }
 
-    .widget.summary > div:first-child {
-        background-color: #222b33;
-        padding: 1rem;
-        border-radius: 1rem 0 0 1rem;
+    .widget.summary {
+        transition-property: all;
+        transition-duration: .5s;
     }
 
-        .widget.summary > div:first-child i {
-            font-weight: bold;
+        .widget.summary:hover {
+            transform: scale(1.05) translateZ(0px);
+            box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.3);
         }
+
+        .widget.summary > div:first-child {
+            background-color: #222b33;
+            padding: 1rem;
+            border-radius: 1rem 0 0 1rem;
+        }
+
+            .widget.summary > div:first-child i {
+                font-weight: bold;
+            }
 
     .widget.income > div:first-child {
         color: #65da41;
@@ -208,8 +218,43 @@ body {
 
 .add-widget:hover {
     color: #7344AE;
-    transition-property: all;
-    transition-duration: .5s;
     font-size: 2rem;
     cursor: pointer;
 }
+
+.add-widget {
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+/*Navbar*/
+nav.navbar {
+    background-color: rgba(18, 22, 29);
+}
+
+    nav.navbar i {
+        padding: 10px;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition-property: all;
+        transition-duration: .5s;
+    }
+
+        nav.navbar i:hover {
+            cursor: pointer;
+            background-color: #48545f14;
+            transform: scale(1.8) translateZ(0px);
+        }
+
+img.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+    img.profile-pic:hover {
+        transform: scale(1.3) translateZ(0px);
+    }
