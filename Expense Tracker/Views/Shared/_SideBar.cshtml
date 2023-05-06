@@ -4,17 +4,51 @@
 
 @{
 	List<Object> MenuItems = new List<Object>();
+	MenuItems.Add(new
+	{
+		text = "General",
+		separator = true
+	});
+	
+	MenuItems.Add(new
+	{
+		text = "Dashboard",
+		url = "/",
+		iconCss = "fa-solid fa-box"
+	});
 
 	MenuItems.Add(new
 			{
 				text = "Categories",
-				url = "/Categories"
+				url = "/Categories",
+				iconCss = "fa-solid fa-folder-closed"
 			});
 
 	MenuItems.Add(new
 	{
 		text = "Transactions",
-		url = "/Transactions"
+		url = "/Transactions",
+		iconCss = "fa-solid fa-arrow-right-arrow-left"
+	});
+
+	MenuItems.Add(new
+	{
+		text = "Extras",
+		separator = true
+	});
+
+	MenuItems.Add(new
+	{
+		text = "Reports",
+		url = "#",
+		iconCss = "fa-solid fa-chart-simple"
+	});
+
+	MenuItems.Add(new
+	{
+		text = "Settings",
+		url = "#",
+		iconCss = "fa-solid fa-gear"
 	});
 }
 
@@ -22,6 +56,6 @@
 
 <ejs-sidebar id="sidebar" width="290px" closeOnDocumentClick="false">
 	<e-content-template>
-		<ejs-menu id="menu" items="MenuItems" orientation="Vertical"></ejs-menu>
+		<ejs-menu id="menu" items="MenuItems" orientation="Vertical" hamburgerMode></ejs-menu>
 	</e-content-template>
 </ejs-sidebar>
