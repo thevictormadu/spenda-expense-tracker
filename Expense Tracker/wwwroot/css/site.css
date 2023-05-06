@@ -195,11 +195,11 @@ body {
     }
 
     .widget.expense > div:first-child {
-        color: #ff4e48;
+        color: #E2AB25;
     }
 
     .widget.balance > div:first-child {
-        color: #2aa1ff;
+        color: #7344AE;
     }
 
     .widget.chart {
