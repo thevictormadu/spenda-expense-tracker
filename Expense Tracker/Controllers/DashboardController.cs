@@ -55,7 +55,9 @@ namespace Expense_Tracker.Controllers
                     CategoryTitleWithIcon = k.First().Category.Icon + " " + k.First().Category.Title,
                     Amount = k.Sum(a => a.Amount),
                     FormattedAmount = k.Sum(a => a.Amount).ToString("C0"),
-                });
+                })
+                .OrderByDescending(d => d.Amount)
+                .ToList();
 
             return View();
         }
