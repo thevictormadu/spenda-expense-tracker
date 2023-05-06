@@ -205,3 +205,11 @@ body {
     .widget.chart {
         padding: 5px;
     }
+
+.add-widget:hover {
+    color: #7344AE;
+    transition-property: all;
+    transition-duration: .5s;
+    font-size: 2rem;
+    cursor: pointer;
+}

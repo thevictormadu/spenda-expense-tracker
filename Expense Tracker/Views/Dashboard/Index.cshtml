@@ -45,8 +45,8 @@
     </div>
 </div>
 
-             @*Doughnut and spline chart*@
-    <div class="row mb-4">
+@*Doughnut and spline chart*@
+<div class="row mb-4">
         <div class="col-md-4">
             <div class="widget chart">
                 <div class="p-4">
@@ -99,3 +99,32 @@
             </div>
         </div>
     </div>
+
+@*Recent transactions*@
+<div class="row">
+    <div class="col-md-6">
+        <div class="widget">
+            <div class="p-4">
+                <h5 class="fw-bold">Recent Transactions</h5>
+            </div>
+            <div class="px-4 pb-4">
+                <ejs-grid id="recent-transactions" dataSource=@ViewBag.RecentTransactions>
+                    <e-grid-columns>
+                        <e-grid-column field="CategoryTitleWithIcon" headerText="Category"></e-grid-column>
+                        <e-grid-column field="Date" headerText="Date" width="110px " textAlign="Left" format="MMM-dd-yy" type="date"></e-grid-column>
+                        <e-grid-column field="AmountWithPrefix" headerText="Amount" width="150px " textAlign="Right"></e-grid-column>
+                        
+                    </e-grid-columns>
+                </ejs-grid>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="widget h-100">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <i class="fa-solid fa-plus add-widget"></i>
+        </div>
+        </div>
+    </div>
+
+</div>
